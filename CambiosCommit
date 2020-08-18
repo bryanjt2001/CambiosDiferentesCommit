@@ -1,0 +1,53 @@
+#Añado una nueva linea en el codigo "Yo estoy bien"
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git diff
+diff --git a/Archivo1.txt b/Archivo1.txt
+index 56d106f..99c0c2f 100644
+--- a/Archivo1.txt
++++ b/Archivo1.txt
+@@ -1 +1,2 @@
+ Hola como estas
++Yo estoy bien
+\ No newline at end of file
+
+#Añado un texto al Archivo2 "Hoal esto es una prueba"
+diff --git a/Archivo2.txt b/Archivo2.txt
+index e69de29..e52a353 100644
+--- a/Archivo2.txt
++++ b/Archivo2.txt
+@@ -0,0 +1 @@
++Hola esto es una prueba
+\ No newline at end of file
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git add .
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Archivo1.txt
+        modified:   Archivo2.txt
+
+#Ejecuto el comando git diff head,ver las diferencias entre mi zona de trabajo y el último commit
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git diff HEAD
+diff --git a/Archivo1.txt b/Archivo1.txt
+index 56d106f..99c0c2f 100644
+--- a/Archivo1.txt
++++ b/Archivo1.txt
+@@ -1 +1,2 @@
+ Hola como estas
++Yo estoy bien
+\ No newline at end of file
+diff --git a/Archivo2.txt b/Archivo2.txt
+index e69de29..e52a353 100644
+--- a/Archivo2.txt
++++ b/Archivo2.txt
+@@ -0,0 +1 @@
++Hola esto es una prueba
+\ No newline at end of file
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git commit -m "Edito el commit"
+
+#Ambas salidas son nulas debido a que no se ha realizado un cambio.
+
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git diff
+C:\Users\Bryan Jácome Tumbaco\Desktop\Nueva carpeta\Prueba>git diff --staged
